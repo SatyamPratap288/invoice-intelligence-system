@@ -155,3 +155,38 @@ else:
             st.error("🚨 Invoice requires **MANUAL APPROVAL**")
         else:
             st.success("✅ Invoice is **SAFE for Auto-Approval**")
+
+
+            # --- ADDED: ENTERPRISE FREIGHT AUDIT MODULE ---
+st.markdown("---")
+st.header("🔍 Carrier Freight Audit & Leakage Detector")
+st.write("Compare the Machine Learning baseline prediction against the actual carrier bill (e.g., FedEx/UPS) to detect revenue leakage and overcharges.")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    actual_billed = st.number_input("Actual Billed Cost by Carrier ($)", min_value=0.0, value=250.00, step=10.0)
+
+with col2:
+    predicted_baseline = st.number_input("ML Predicted Baseline Cost ($)", min_value=0.0, value=200.00, step=10.0)
+
+# Business Logic for Anomaly Detection
+difference_usd = actual_billed - predicted_baseline
+if predicted_baseline > 0:
+    variance_pct = (difference_usd / predicted_baseline) * 100
+else:
+    variance_pct = 0.0
+
+# eBay Business Rule: Flag if carrier charges > 15% over prediction
+TOLERANCE_THRESHOLD = 15.0  
+
+st.subheader("Audit Status:")
+
+if variance_pct > TOLERANCE_THRESHOLD:
+    st.error(f"🚨 **REVENUE LEAKAGE DETECTED:** Carrier billed {variance_pct:.1f}% higher than expected!")
+    st.write(f"**Financial Impact:** Potential overcharge of **${difference_usd:.2f}**.")
+    st.warning("Recommended Action: Route invoice to Logistics Finance for manual dispute.")
+elif variance_pct < 0:
+    st.success(f"✅ **CLEARED:** Carrier billed less than expected. No action needed.")
+else:
+    st.success(f"✅ **CLEARED:** Billed amount is within the acceptable {TOLERANCE_THRESHOLD}% variance threshold. Auto-approve for payment.")
