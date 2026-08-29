@@ -9,6 +9,7 @@
 - <a href="#models-used">Models Used</a>
 - <a href="#metrics">Evaluation Metrics</a>
 - <a href="#application">Application</a>
+* [Carrier Freight Audit & Leakage Detector](#-carrier-freight-audit--leakage-detector)
 - <a href="#project-structure">Project Structure</a>
 - <a href="#how-to-run-this-project">How to Run This Project</a>
 - <a href="#author--contact">Author & Contact</a>
