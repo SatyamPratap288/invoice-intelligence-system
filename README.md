@@ -181,6 +181,19 @@ streamlit run app.py
 ---
 <h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
 
+
+
+## 🔍 Enterprise Freight Audit & Leakage Detector
+* **Module Purpose:** Integrates a real-time audit tool within the Streamlit dashboard to compare machine learning baseline predictions against actual carrier bills (e.g., FedEx/UPS).
+* **Business Logic & Tolerance Rules:** Implements a strict enterprise threshold rule (`TOLERANCE_THRESHOLD = 15.0%`). If a carrier bills more than 15% over the predicted machine learning baseline, the system automatically flags a **Revenue Leakage Anomaly**, calculates the exact dollar overcharge, and routes the invoice to Logistics Finance for manual dispute.
+* **Auto-Approval Workflow:** Automatically clears and auto-approves invoices that fall below or within the acceptable variance threshold, streamlining financial operations.
+
+
+
+
+
+
+
 **Satyam Pratap**  
 
  Email: pratapsatyam7777@gmail.com@gmail.com  
