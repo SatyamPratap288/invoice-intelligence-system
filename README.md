@@ -181,11 +181,10 @@ streamlit run app.py
 ---
 <h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
 
-**Ayushi Mishra**  
+**Satyam Pratap**  
 Data Scientist  
-📧 Email: techclasses0810@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/ayushi-mishra-30813b174/)  
-🔗 [Portfolio](https://www.youtube.com/@techclasses0810/)
+ Email: pratapsatyam7777@gmail.com@gmail.com  
+ [LinkedIn](https://www.linkedin.com/in/satyam-pratap-7712a9373)
 
 
 
