@@ -4,6 +4,8 @@
 ## 📌 Table of Contents
 - <a href="#project-overview">Project Overview</a>
 - <a href="#business-objectives">Business Objectives</a>
+
+* [Carrier Freight Audit & Leakage Detector](#-carrier-freight-audit--leakage-detector)
 - <a href="#data-sources">Data Sources</a>
 - <a href="#eda">Exploratory Data Analysis</a>
 - <a href="#models-used">Models Used</a>
