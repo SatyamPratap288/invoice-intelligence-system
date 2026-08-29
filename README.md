@@ -182,7 +182,7 @@ streamlit run app.py
 <h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
 
 **Satyam Pratap**  
-Data Scientist  
+
  Email: pratapsatyam7777@gmail.com@gmail.com  
  [LinkedIn](https://www.linkedin.com/in/satyam-pratap-7712a9373)
 
