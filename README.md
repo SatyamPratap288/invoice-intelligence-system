@@ -51,6 +51,20 @@ Predict whether a vendor invoice should be flagged for manual approval due to ab
 
 ![](images/flag_invoice_prediction.png)
 ---
+## 🔍 Carrier Freight Audit & Leakage Detector
+
+**Objective:**
+Compare the machine learning baseline cost prediction against actual carrier bills (e.g., FedEx/UPS) in real time to detect revenue leakage and overcharges.
+
+**Why it matters:**
+* Logistics and supply chain partners frequently bill outside expected baseline parameters.
+* Manual auditing of every freight bill is slow and doesn't scale for high-volume e-commerce.
+* Setting a strict variance threshold automates compliance and protects profit margins.
+
+**Enterprise Business Logic & Threshold Rules:**
+* **Tolerance Threshold:** Implements a strict enterprise rule (`TOLERANCE_THRESHOLD = 15.0%`).
+* **Revenue Leakage Alert:** If a carrier bills more than 15% over the predicted baseline, the system flags an anomaly, computes the exact dollar overcharge, and routes the invoice to Logistics Finance for manual dispute.
+* **Auto-Approval:** Invoices falling below or within the acceptable 15% variance are automatically cleared for payment.
 
 <h2><a class="anchor" id="data-sources"></a>📂 Data Sources</h2>
 
