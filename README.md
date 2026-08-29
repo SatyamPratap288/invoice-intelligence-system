@@ -4,8 +4,7 @@
 ## 📌 Table of Contents
 - <a href="#project-overview">Project Overview</a>
 - <a href="#business-objectives">Business Objectives</a>
-
-* [Carrier Freight Audit & Leakage Detector](#-carrier-freight-audit--leakage-detector)
+3. **Carrier Freight Audit & Leakage Detector:** Comparing machine learning baseline cost predictions against actual carrier bills in real time to detect revenue leakage and overcharges.
 - <a href="#data-sources">Data Sources</a>
 - <a href="#eda">Exploratory Data Analysis</a>
 - <a href="#models-used">Models Used</a>
