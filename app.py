@@ -177,7 +177,7 @@ if predicted_baseline > 0:
 else:
     variance_pct = 0.0
 
-# eBay Business Rule: Flag if carrier charges > 15% over prediction
+# Enterprise Audit Rule: Flag if carrier charges > 15% over prediction
 TOLERANCE_THRESHOLD = 15.0  
 
 st.subheader("Audit Status:")
